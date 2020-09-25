@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: Wisdom_Script_AJ;
+    src: url(../uploads/fonts/Wisdom_Script_AJ.otf) format(otf);
+}
+@font-face {
+    font-family: DroidSerif_BoldItalic;
+    src: url(../uploads/fonts/DroidSerif_BoldItalic.ttf);
+}
+@font-face {
+    font-family: DroidSerif_bold;
+    src: url(../uploads/fonts/DroidSerif_Bold.ttf);
+}
+@font-face {
+    font-family: DroidSerif_Italic;
+    src: url(../uploads/fonts/DroidSerif_Italic.ttf);
+}
+@font-face {
+    font-family: DroidSerif_Regular;
+    src: url(../uploads/fonts/DroidSerif_Regular.ttf);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+	background: #cfcfcf;
+}
+body .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+body .explorer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 300px;
+}
+body .explorer li {
+    list-style: none;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    color: black;
+}
+body form {
+    padding: 15px;
+}
+body form button {
+    width: 50px;
+	margin: 5px;
+	height: 28px;
+	border: 1px solid #ccc;
+	background: #fff;
+	color: #666;
+	border-radius: 5px;
+	box-shadow: 0 0 2px #ccc;
+	cursor: pointer;
+}
+body .explorer form {
+    text-align: center;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+body .explorer form button {
+    width: 90px;
+	margin: 5px;
+	height: 28px;
+	border: 1px solid #ccc;
+	background: #fff;
+	color: #666;
+	border-radius: 5px;
+	box-shadow: 0 0 2px #ccc;
+	cursor: pointer;
+}
+body input {
+	font-size: 15px;
+	border: 1px solid #cfcfcf;
+	background: #F6F6f6;
+	border-radius: 10px;
+}
+body .logout {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    text-transform: uppercase;
+    text-align: right;
+}
