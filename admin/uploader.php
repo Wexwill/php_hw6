@@ -2,18 +2,12 @@
 
 if (empty($_FILES['files']['name'][0])) exit;
 
-echo '<pre>';
-print_r($_FILES);
-echo '</pre>';
-
-
-$destPath = './uploads';
+$destPath = '../uploads';
 if (!file_exists($destPath)) {
-    mkdir('./uploads');
+    mkdir('../uploads');
 }
 
 $allFiles = scandir($destPath);
-
 
 foreach($_FILES['files']['tmp_name'] as $index => $path) {
     if (file_exists($path)) {
@@ -25,3 +19,4 @@ foreach($_FILES['files']['tmp_name'] as $index => $path) {
         move_uploaded_file($path, $destPath . '/' . $fileName);
     }
 }
+header("Location: ./explorer.php?path=./../uploads/");

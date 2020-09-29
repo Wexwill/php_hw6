@@ -59,14 +59,14 @@ foreach ($dir_array as $dir) {
         }
     }
 
-    $list .= '<li><a href="/admin/explorer.php?path=' . $path . '">' . $dir . '</a></li>';
+    $list .= '<li><a href="/admin/explorer.php?path=' . $path . '">[ ' . $dir . ' ]</a></li>';
 }
 
 foreach ($file_array as $file) {
     $list .= '<li><a href="/admin/explorer.php?path=' . $basePath . $file . '">' . $file . '</a></li>';
 }
 
-if (!empty($list)) echo '<ul><li><a href="/admin/">.</a></li>' . $list . '</ul>';
+if (!empty($list)) echo '<ul><li><a href="/admin/">[ . ]</a></li>' . $list . '</ul>';
 
 if (is_file($basePath)) {
     $content = htmlspecialchars(file_get_contents($basePath));
@@ -123,10 +123,22 @@ if (!empty($_POST['filecontent'])) {
     // Delete
 
 if (!empty($_POST['action']) && !empty($_POST['path']) && $_POST['action'] == 'delete') {
+
+    $newPathArr = explode('/', $path);
+
+    if (is_dir($path)) {
+        array_pop($newPathArr);
+        array_pop($newPathArr);
+    }
+    if (is_file($path)) {
+        array_pop($newPathArr);
+    }
+    $newPath = implode('/', $newPathArr) . '/';
+
     if (is_dir($_POST['path'])) rmdir($_POST['path']);
     else if (is_file($_POST['path'])) unlink($_POST['path']);
 
-    header("Location:" . $_SERVER['REQUEST_URI']);
+    header("Location: ./explorer.php?path=$newPath");
 }
 
     // Rename

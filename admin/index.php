@@ -13,7 +13,7 @@ if (!empty($_COOKIE['auth'])) {
     <title>Log in</title>
 </head>
 <body>
-    <div class="login">Log in</div>
+    <div class="login">Log in (admin 12345)</div>
 
     <form method="POST" action="./login.php">
         <input type="text" name="login" placeholder="Login">

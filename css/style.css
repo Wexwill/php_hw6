@@ -2,15 +2,47 @@
 margin: 0;
 padding: 0;
 }
+@font-face {
+    font-family: Wisdom_Script_AJ;
+    src: url(../uploads/fonts/Wisdom_Script_AJ.otf) format(otf);
+}
+@font-face {
+    font-family: DroidSerif_BoldItalic;
+    src: url(../uploads/fonts/DroidSerif_BoldItalic.ttf);
+}
+@font-face {
+    font-family: DroidSerif_bold;
+    src: url(../uploads/fonts/DroidSerif_Bold.ttf);
+}
+@font-face {
+    font-family: DroidSerif_Italic;
+    src: url(../uploads/fonts/DroidSerif_Italic.ttf);
+}
+@font-face {
+    font-family: DroidSerif_Regular;
+    src: url(../uploads/fonts/DroidSerif_Regular.ttf);
+}
 
 body {
-background-color: #cfcfcf;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #cfcfcf;
 }
 
 body .login {
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: 20px;
     text-transform: uppercase;
     text-align: right;
+}
+body .login a {
+    padding: 5px;
+    text-decoration: none;
+    color: #000;
+    box-shadow: 0 0 6px 5px #666;
+    border-radius: 5px;
+}
+body .login a:hover {
+    color: rgb(4, 0, 255);
+    box-shadow: 0 0 6px 5px  rgb(4, 0, 255);;
 }
